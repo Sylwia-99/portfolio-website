@@ -32,7 +32,10 @@
                 "output": "/assets"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/boxicons/css/boxicons.min.css"
+            ],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -95,7 +98,10 @@
                 "output": "/assets"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": [
+              "src/styles.scss",
+              "node_modules/boxicons/css/boxicons.min.css"
+            ]
           }
         }
       }
