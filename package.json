@@ -5,10 +5,10 @@
     "ng": "ng",
     "start": "ng serve --configuration=development",
     "dev": "ng serve --host 0.0.0.0 --port 3000 --configuration=development",
-    "build": "ng build --configuration=browser",
-    "build:ssr": "ng build --configuration=browser && ng run portfolio:server:production",
+    "build": "ng build --configuration=production",
+    "build:ssr": "ng build --configuration=production && ng run portfolio:server:production",
     "serve:ssr": "node dist/server/main.mjs",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration=development",
     "test": "ng test"
   },
   "prettier": {
