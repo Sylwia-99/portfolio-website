@@ -62,6 +62,21 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "browser": {
+              "outputPath": "dist/browser",
+              "index": "src/index.html",
+              "browser": "src/main.ts",
+              "tsConfig": "tsconfig.app.json",
+              "assets": [
+                { "glob": "**/*", "input": "public", "output": "/" },
+                { "glob": "**/*", "input": "src/assets", "output": "/assets" }
+              ],
+              "styles": [
+                "src/styles.scss",
+                "node_modules/boxicons/css/boxicons.min.css"
+              ],
+              "inlineStyleLanguage": "scss"
             }
           },
           "defaultConfiguration": "production"
