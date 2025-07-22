@@ -2,9 +2,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: -webkit-fill-available;
-  padding: 20px 10% 0;
-  background: transparent;
+  width: 100%;
+  padding: 2rem 10%;
+  background: #000908;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,7 @@
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  margin-left: 1rem;
+  margin-left: 3.5rem;
   transition: 0.3s;
   cursor: pointer;
   opacity: 0;
@@ -43,23 +43,21 @@
   color: #0ef;
 }
 
-@media (max-width: 1000px) {
-  .navbar,
-  .logo {
-    display: none;
-  }
-}
+// @media (max-width: 1000px) {
+//   .navbar,
+//   .logo {
+//     display: none;
+//   }
+// }
 
 .home {
   position: relative;
-  // width: 100%;
+  width: 100%;
   justify-content: space-between;
-  // height: 100vh;
-  background: url("/assets/images/wallpaper.jpg") no-repeat;
-  background-size: cover;
+  height: 100vh;
   display: flex;
   align-items: center;
-  padding: 70px 10% 2%;
+  padding: 70px 10% 0%;
   color: #fff;
 }
 
@@ -68,8 +66,10 @@
 }
 
 .home-content h3 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
   animation: slideBottom 1s ease forwards;
   animation-delay: 0.7s;
 }
@@ -83,7 +83,7 @@
 }
 
 .home-content h1 {
-  font-size: 4.6rem;
+  font-size: 5.6rem;
   font-weight: 700;
   margin: -0.3rem 0;
   opacity: 0;
@@ -110,7 +110,11 @@
   font-size: 2rem;
   color: #0ef;
   text-decoration: none;
-  margin: 2.5rem 1.5rem 2.5rem 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  margin: 3rem 1.5rem 3rem 0;
 }
 
 .home-sci a:hover {
@@ -118,12 +122,13 @@
   color: #081b29;
   box-shadow: 0 0 2rem #0ef;
 }
-h1,
-h2,
-h3 {
-  line-height: 1.5;
-  margin: 0;
-}
+
+// h1,
+// h2,
+// h3 {
+//   line-height: 1.5;
+//   margin: 0;
+// }
 
 .btn-box {
   display: inline-block;
@@ -135,11 +140,53 @@ h3 {
   letter-spacing: 0.1rem;
   text-decoration: none;
   font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 0.5rem #0ef, 0 0 2.5rem #0ef;
 }
 
 .btn-box:hover {
   box-shadow: 0 0 0.5rem cyan, 0 0 2.5rem cyan, 0 0 5rem cyan, 0 0 10rem cyan,
     0 0 20rem cyan;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-img img {
+  padding-bottom: 20%;
+  max-width: 630px;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-text h2 {
+  font-size: 60px;
+}
+
+.about-text h2 span {
+  color: #0ef;
+}
+
+.about-text h4 {
+  font-size: 29px;
+  font-weight: 600;
+  color: #ffff;
+  line-height: 1.7;
+  margin: 15px 0 30px;
+}
+
+.about-text p {
+  color: aliceblue;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 4rem;
 }
 
 @keyframes slideRight {

@@ -3,8 +3,15 @@
 
 body {
   margin: 0 !important;
+  color: #ededed;
+  background: url("/assets/images/wallpaper.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* <- TO dodaj */
+  scroll-behavior: smooth;
 }
-:host {
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

@@ -1,11 +1,11 @@
 <header class="header">
   <a href="/" class="logo">Portfolio</a>
   <nav class="navbar">
-    <a href="/" class="logo">Home</a>
-    <a href="/" class="logo">About me</a>
-    <a href="/" class="logo">Skills</a>
-    <a href="/" class="logo">Portfolio</a>
-    <a href="/" class="logo">Contact</a>
+    <a href="/">Home</a>
+    <a href="/">About me</a>
+    <a href="/">Skills</a>
+    <a href="/">Portfolio</a>
+    <a href="/">Contact</a>
   </nav>
 </header>
 
@@ -13,11 +13,52 @@
   <div class="home-content">
     <h3>Hello, It's Me</h3>
     <h1>Sylwia Mosur</h1>
-    <h3>And I'm a <span class="text"> Front-End Developer</span></h3>
+    <h3>
+      And I'm a&nbsp;
+      <span class="text">
+        <ngx-typed-js
+          [strings]="['Front-End Developer', 'Web Developer']"
+          [typeSpeed]="100"
+          [backSpeed]="100"
+          [backDelay]="1000"
+          [loop]="true"
+        >
+          <span class="typing"></span> </ngx-typed-js
+      ></span>
+    </h3>
     <p>
       Front-End Developer with 4 years of experience in building ERP
       applications using Angular.
     </p>
+    <!-- <p>
+      Proven track record of designing and implementing solutions that improved
+      business processes, supported by a strong engineering foundation and a
+      Data Science background. I demonstrate strong problem-solving and
+      communication skills, and I actively seek challenges in projects that
+      combine modern technologies with real business value.
+    </p> -->
+    <div class="home-sci">
+      <a href="https://www.facebook.com/sylwia.rusek.77/" style="--i: 7"
+        ><i class="bx bxl-facebook"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/sylwia-mosur-8801b61bb/"
+        style="--i: 8"
+        ><i class="bx bxl-linkedin"></i
+      ></a>
+      <a href="https://github.com/Sylwia-99" style="--i: 9"
+        ><i class="bx bxl-github"></i
+      ></a>
+    </div>
+    <a href="/"><i class="btn-box"> More about me</i> </a>
+  </div>
+  <span class="home-imgHover"></span>
+</section>
+<section class="about" id="about">
+  <div class="about-img"><img /></div>
+  <div class="about-text">
+    <h2>About <span>Me</span></h2>
+    <h4>Front-End Developer</h4>
     <p>
       Proven track record of designing and implementing solutions that improved
       business processes, supported by a strong engineering foundation and a
@@ -25,15 +66,6 @@
       communication skills, and I actively seek challenges in projects that
       combine modern technologies with real business value.
     </p>
-    <div class="home-sci">
-      <a href="https://www.facebook.com/sylwia.rusek.77/"
-        ><i class="bx bxl-facebook"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sylwia-mosur-8801b61bb/"
-        ><i class="bx bxl-linkedin"></i>
-      </a>
-      <a href="https://github.com/Sylwia-99"><i class="bx bxl-github"></i> </a>
-    </div>
     <a href="/"><i class="btn-box"> More about me</i> </a>
   </div>
 </section>
