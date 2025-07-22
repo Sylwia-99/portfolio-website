@@ -43,12 +43,16 @@
   color: #0ef;
 }
 
-// @media (max-width: 1000px) {
-//   .navbar,
-//   .logo {
-//     display: none;
-//   }
-// }
+@media (max-width: 1000px) {
+  .navbar,
+  .logo {
+    display: none;
+  }
+
+  .header {
+    background: transparent;
+  }
+}
 
 .home {
   position: relative;
