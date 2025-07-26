@@ -7,7 +7,7 @@ body {
   background: url("/assets/images/wallpaper.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: scroll; /* <- TO dodaj */
+  background-attachment: fixed;
   scroll-behavior: smooth;
 }
 
