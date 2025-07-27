@@ -1,0 +1,119 @@
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+
+@keyframes animate-path {
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// ===== Mixins =====
+@mixin slide-bottom($duration: 1s, $timing: ease, $fill-mode: forwards) {
+  animation: slideBottom $duration $timing $fill-mode;
+}
+
+@mixin slide-top($duration: 0.5s, $timing: ease, $fill-mode: forwards) {
+  animation: slideTop $duration $timing $fill-mode;
+}
+
+@mixin slide-left($duration: 1s, $timing: ease, $fill-mode: forwards) {
+  animation: slideLeft $duration $timing $fill-mode;
+}
+
+@mixin slide-right($duration: 1s, $timing: ease, $fill-mode: forwards) {
+  animation: slideRight $duration $timing $fill-mode;
+}
+
+@mixin show-text(
+  $duration: 0.5s,
+  $delay: 0s,
+  $timing: linear,
+  $fill-mode: forwards
+) {
+  animation: showText $duration $delay $timing $fill-mode;
+}
+
+@mixin animate-bar($duration: 1s, $timing: linear, $fill-mode: forwards) {
+  animation: animate-bar $duration $timing $fill-mode;
+}
+
+@mixin animate-scale($duration: 1s) {
+  animation: animate $duration forwards;
+}
+
+@mixin animate-path(
+  $duration: 1s,
+  $delay: 0s,
+  $timing: linear,
+  $fill-mode: forwards
+) {
+  animation: animate-path $duration $delay $timing $fill-mode;
+}
+
+@mixin animate-scale(
+  $duration: 1s,
+  $delay: 0s,
+  $timing: cubic-bezier(1, 0, 0, 1),
+  $fill-mode: forwards
+) {
+  animation: animate $duration $delay $timing $fill-mode;
+}
