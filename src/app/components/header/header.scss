@@ -1,0 +1,57 @@
+@use "../../../styles/animations" as mixin;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 10%;
+  background: #000908;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  font-size: 2.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  @include mixin.slide-right(1s, ease, forwards);
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0;
+  @include mixin.slide-top(0.5s, ease, forwards);
+}
+
+.navbar a:last-child {
+  margin-right: 1rem;
+}
+
+.navbar a:hover {
+  color: #0ef;
+}
+
+@media (max-width: 1000px) {
+  .navbar,
+  .logo {
+    display: none;
+  }
+
+  .header {
+    background: transparent;
+  }
+}

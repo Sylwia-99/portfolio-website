@@ -1,0 +1,6 @@
+@use "../../../styles/animations" as mixin;
+
+.btn-box {
+  @include mixin.btn-box(2s);
+  @include mixin.glowing-hover(cyan);
+}
