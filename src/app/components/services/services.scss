@@ -2,6 +2,10 @@
 
 .services {
   height: 100vh;
+
+  @media screen and (max-width: 767px) {
+    height: 70vh;
+  }
 }
 
 #services {
@@ -9,10 +13,19 @@
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 4rem;
+  margin-top: 130px;
 }
 
 .container {
   padding: 90px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+  }
 }
 
 .sub-title {
@@ -20,8 +33,17 @@
   font-size: 60px;
   padding-bottom: 70px;
 
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    padding-bottom: 0;
+  }
+
   span {
     color: #0ef;
+
+    @media screen and (max-width: 767px) {
+      font-size: 40px;
+    }
   }
 }
 
@@ -60,6 +82,35 @@
   font-size: 12px;
   margin-top: 20px;
   display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+  .services-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 20px;
+    margin: 10px -20px;
+  }
+
+  .services-list > div {
+    flex: 0 0 92%;
+    scroll-snap-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .services-list > div:last-child {
+    margin-right: 0;
+  }
+
+  .services-list > div:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 40px rgba(0, 238, 255, 0.7);
+  }
 }
 
 .read {

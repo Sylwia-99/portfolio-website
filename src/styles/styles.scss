@@ -17,4 +17,8 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "poppins", "sans-serif";
+
+  @media screen and (max-width: 767px) {
+    font-size: small;
+  }
 }

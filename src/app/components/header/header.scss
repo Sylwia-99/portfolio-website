@@ -11,6 +11,10 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+
+  @media (max-width: 1299px) {
+    padding: 1rem 10%;
+  }
 }
 
 .logo {
@@ -45,13 +49,10 @@
   color: #0ef;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
   .navbar,
-  .logo {
-    display: none;
-  }
-
+  .logo,
   .header {
-    background: transparent;
+    display: none;
   }
 }

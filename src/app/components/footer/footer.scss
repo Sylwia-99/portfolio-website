@@ -4,12 +4,21 @@
   padding: 25px 0;
   background: rgb(7, 85, 91);
   margin-top: 70px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 0;
+  }
 }
 
 .top {
   position: fixed;
   bottom: 1rem;
   right: 2.1rem;
+
+  @media screen and (max-width: 767px) {
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
 }
 
 .top i {

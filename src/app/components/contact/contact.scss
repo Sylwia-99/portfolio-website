@@ -7,16 +7,34 @@
   gap: 3rem;
   padding-left: 30px;
   margin-top: 130px;
+  height: 100vh;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 
 .contact-text h2 {
   font-size: 90px;
   line-height: 1;
   text-align: center;
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 1299px) {
+    font-size: 60px;
+    margin-top: 130px;
+  }
 }
 
 .contact-text h2 span {
   color: #0ef;
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+  }
 }
 
 .contact-text h4 {
@@ -35,6 +53,14 @@
 
 .contact-list {
   margin-bottom: 3rem;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 1299px) {
+    margin-bottom: 10px;
+  }
 }
 
 .contact-list li {
@@ -73,6 +99,10 @@
   opacity: 0;
   @include mixin.slide-left(1s, ease, forwards);
   animation-delay: calc(0.2s * var(--i));
+
+  @media screen and (max-width: 1299px) {
+    margin: 15px 10px 15px 0;
+  }
 }
 
 .contact-icons i:hover {
@@ -103,6 +133,14 @@ form button {
 .contact-form textarea {
   resize: none;
   height: 220px;
+
+  @media screen and (max-width: 767px) {
+    height: 160px;
+  }
+
+  @media screen and (max-width: 1299px) {
+    height: 160px;
+  }
 }
 
 .contact-form .send {

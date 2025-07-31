@@ -6,6 +6,12 @@
   align-items: center;
   gap: 1.5rem;
   height: 100vh;
+  margin-top: 130px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    text-align: center;
+  }
 }
 
 .about-img img {
@@ -18,10 +24,22 @@
 
 .about-text h2 {
   font-size: 60px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 1299px) {
+    margin-top: 5rem;
+  }
 }
 
 .about-text h2 span {
   color: #0ef;
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+  }
 }
 
 .about-text h4 {
@@ -37,6 +55,15 @@
   font-size: 2rem;
   line-height: 1.4;
   margin-bottom: 4rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  @media (max-width: 1299px) {
+    font-size: 1.5rem;
+  }
 }
 
 .btn-box {

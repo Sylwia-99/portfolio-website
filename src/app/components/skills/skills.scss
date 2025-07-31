@@ -3,6 +3,10 @@
 #skills {
   height: 100vh;
   padding-top: 150px;
+
+  @media screen and (max-width: 767px) {
+    height: 200vh;
+  }
 }
 
 .sub-title {
@@ -10,8 +14,17 @@
   font-size: 60px;
   padding-bottom: 70px;
 
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    padding-bottom: 0;
+  }
+
   span {
     color: #0ef;
+
+    @media screen and (max-width: 767px) {
+      font-size: 40px;
+    }
   }
 }
 
@@ -30,6 +43,20 @@ div.skills {
   height: 500px;
   padding: 75px 90px;
   margin-left: 120px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: max-content;
+    padding: 10px 20px;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 1299px) {
+    width: 50vw;
+    height: max-content;
+    padding: 10px 20px;
+    margin-left: 0;
+  }
 }
 
 .heading1 {
@@ -38,14 +65,35 @@ div.skills {
   text-underline-offset: 10px;
   text-decoration-thickness: 5px;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 767px) {
+    font-size: revert;
+  }
 }
 
 .bar {
   font-size: 23px;
+
+  @media screen and (max-width: 767px) {
+    i,
+    svg {
+      font-size: revert;
+    }
+  }
+}
+
+.technical-bars {
+  @media screen and (max-width: 767px) {
+    font-size: xx-large;
+  }
 }
 
 .technical-bars .bar {
   margin-top: 40px 0;
+
+  @media screen and (max-width: 767px) {
+    font-size: xx-large;
+  }
 }
 
 .technical-bars .bar:first-child {
@@ -261,4 +309,12 @@ div.skills {
   font-weight: 500;
   @include mixin.show-text(0.5s, 1.5s, linear, forwards);
   opacity: 0;
+
+  @media screen and (max-width: 767px) {
+    transform: translateX(-100px);
+  }
+
+  @media screen and (max-width: 1299px) {
+    transform: translateX(-140px);
+  }
 }
